@@ -68,6 +68,11 @@ def producto_vectores(vector1,vector2):
     for i in range(len(vector1)):
         resultado = sumar(resultado,multiplicar(vector1[i],vector2[i]))
     return resultado
+def producto_vectoresReales(vector1,vector2):
+    resultado = 0 
+    for i in range(len(vector1)):
+        resultado+=vector1[i]*ector2[i]
+    return resultado 
 def producto_interno(vector1,vector2):
     return producto_vectores((conjugada_vector(vector1)),vector2)
 def escalar_vector(numero,vector1):
@@ -139,6 +144,19 @@ def producto_matrices(matriz1,matriz2):
            operacion.append(save)
        resultado.append(operacion)
     return resultado
+def producto_matrices_reales(matriz1,matriz2):
+    resultado = []
+    for i in range(len(matriz1)):
+        fila = []
+        for j in range(len(matriz2[0])):
+            save = 0
+            for k in range(len(matriz2)):
+                multi = matriz1[i][k]*matriz2[k][j]
+                save+=multi
+            fila.append(save)
+        resultado.append(fila)
+    return resultado
+
 def norma(numero1):
     return (numero1[0]**2+numero1[1]**2)
 
@@ -195,6 +213,11 @@ def vectorxmatriz(vector,matriz):
     for i in range(len(matriz)):
         ans.append(producto_vectores(vector,matriz[i]))
     return ans
+def vectormatrizReal(vector,matriz):
+    resultado = []
+    for i in range(len(matriz)):
+        resultado.append(producto_vectoresReales(vector,matriz[i]))
+    return resultado
 "Sistema cuántico de partícula en una linea"
 
 def probabilidad (pos,vector):
@@ -210,8 +233,4 @@ def amplitudTransicion(matriz,vector):
     respuesta = producto_vectores(conjugado,vector)
     return respuesta 
 
-def main():
-    vector=[[0.40,0.36],[-0.36,-0.40],[0,0.63]]
-    pos=1
-    print(probabilidad(pos,vector))
-main()
+
