@@ -1,5 +1,10 @@
 # Observables-Y-Medidas
-En este repositorio se modelara en la librería los problemas 
+# Prerrequisitos
+La libreria puede ser importada en python 3.6 
+# Instrucciones
+El archivo esta listo para correrse con la instruccion "import simulacion * "
+# Descripción
+En este repositorio se simularan algunos problemas de teoria cuantica 
 # 4.3.1
 En este ejercicio se encontraran todos los estados posibles en los que puede pasar el sistema descrito en el ejercicio 4.2.2 después de que se haya realizado una medición. ¿Cuál es la probabilidad de que un estado de inicio normalizado | ψ hará la transición a un vector específico?
 # 4.3.2 
